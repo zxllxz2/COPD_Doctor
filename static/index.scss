@@ -1,0 +1,176 @@
+#app {
+  margin: 20px auto;
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  .sidebar,
+  .main {
+    height: 100%;
+  }
+  .sidebar {
+    float: left;
+    color: #f4f4f4;
+    background-color: #2e3238;
+    width: 200px;
+  }
+  .main {
+    position: relative;
+    overflow: hidden;
+    background-color: #eee;
+  }
+}
+
+#card {
+  padding: 10px;
+  margin-left: 15px;
+  margin-top: -5px;
+  margin-bottom: -7px;
+  .avatar {
+    width: 40px;
+    height: 40px;
+    margin-left: -7px;
+    margin-top: -5px;
+    vertical-align: middle; /*这个是图片和文字居中对齐*/
+  }
+  .name {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .search {
+    // background-color: #dcdcdc;
+    height: 25px;
+    //size: 10px;
+    line-height: 10px;
+    padding: 0 5px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    outline: none; /*鼠标点击后不会出现蓝色边框*/
+    //margin-left: -8px;
+    //margin-bottom: 5px;
+    margin: 10px -10px 10px;
+    // color: #FFF;
+  }
+}
+
+#list {
+  li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #292c33;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+  }
+  li.active {
+    /*注意这个是.不是冒号:*/
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .avatar {
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+  .name {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 10px;
+  }
+}
+
+#message {
+	padding: 15px;
+  max-height: 68%;
+  overflow-y: scroll;
+  ul {
+  	list-style-type: none;
+  	li {
+  		margin-bottom: 15px;
+  	}
+  }
+  .nameHeader {
+    background-color: lavender;
+    margin: -14px;
+    border-bottom: 4px groove;
+    .title {
+      margin: 40px;
+      justify-content: space-around;
+      display: inline-block;
+      font-size: 21px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  }
+  //.time {
+  //	text-align: center;
+  //	margin: 7px 0;
+  //	> span {
+  //		display: inline-block;
+  //		padding: 0 18px;
+  //		font-size: 12px;
+  //		color: #FFF;
+  //		background-color: #dcdcdc;
+  //		border-radius: 2px;
+  //	}
+  //}
+  .main {
+  	.avatar {
+  		float: left;
+  		margin: 0 10px 0 0;
+  		border-radius: 3px;
+  		width: 30px;
+  		height: 30px;
+
+  	}
+  	.text {
+  		display: inline-block;
+  		padding: 0 10px;
+  		max-width: 80%;
+  		background-color: #fafafa;
+      border-radius: 4px;
+      line-height: 30px;
+  	}
+  }
+  .self {
+    text-align: right;
+    .avatar {
+      float: right;
+      margin: 0 0 0 10px;
+      border-radius: 3px;
+      width: 30px;
+      height: 30px;
+    }
+    .text {
+      display: inline-block;
+      padding: 0 10px;
+      max-width: 80%;
+      background-color: #b2e281;
+      border-radius: 4px;
+      line-height: 30px;
+    }
+  }
+}
+#uesrtext {
+  position: absolute;
+  bottom: 65px;
+  right: 0;
+  width: 100%;
+  height: 15%;
+  border-top: solid 1px #DDD;
+  .textinput {
+  	padding: 15px;
+    //width: 560px;
+    height: 90px;
+  	width: 95%;
+  	//height: 100%;
+  	border: none;
+  	outline: none;
+  }
+}

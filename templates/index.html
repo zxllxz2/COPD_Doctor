@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet/less" type="text/css" href="../static/index.scss" />
+<script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+<head>
+    <meta charset="utf-8">
+    <title>COPD-bot-demo</title>
+    <style>
+    	* {
+    		margin: 0;
+    		padding: 0;
+    	}
+    	html {
+    		height: 100%;
+    	}
+    	body {
+    		background: #f5f5f5 url('../static/img/bg.jpg') no-repeat center;
+    		font: 14px/1.4em 'Helvetica Neue', Helvetica, 'Microsoft Yahei', Arial, sans-serif;
+    	}
+    </style>
+  </head>
+  <body>
+      <div id="app">
+        <div class="sidebar">
+              <div id="card">
+                <header>
+                    <img class="avatar" src="../static/img/bg.jpg">
+                    <p class="name">Super Sick</p>
+                </header>
+                <footer>
+                    <input class="search" type="text" placeholder="Search users..." >
+                </footer>
+              </div>
+              <div id="list">
+                <ul>
+                    <li class="active">
+                        <img class="avatar" src="../static/img/1.jpg">
+                        <p class="name">COPD Doctor</p>
+                    </li>
+                </ul>
+              </div>
+        </div>
+        <div class="main">
+              <div id="message">
+                <div class="nameHeader">
+                  <header style="height:100px">
+                      <div class="title">COPD Doctor</div></header>
+                </div>
+                <div>
+                  <ul style="margin-top:40px">
+                    <li>
+                      <div class="main">
+                        <img class="avatar" src="../static/img/1.jpg" />
+                        <p class="text">
+                            {{ doctor_diagnosis }}
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="uesrtext">
+                  <form method="POST" action="http://localhost:5000/classify">
+                      <textarea class="textinput" name="text" placeholder="Press Ctrl + Enter to send msg"></textarea>
+                      <button type="submit" style="margin-left:515px; margin-top:-1px; width: 70px">Send</button>
+                  </form>
+              </div>
+        </div>
+      </div>
+  </body>
+</html>
